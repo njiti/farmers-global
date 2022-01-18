@@ -26,7 +26,7 @@ class FarmerTest {
     }
 
     public Farmer setUpFarmer() {
-        Farmer testFarmer = new Farmer("Timothy", "Nairobi", "0764321244", "Beans", "timothy@gmail.com", 300);
+        Farmer testFarmer = new Farmer("Timothy", "Nairobi", "0764321244", "Beans", 10, 300);
         return testFarmer;
     }
 

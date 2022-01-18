@@ -7,24 +7,27 @@ public class Farmer {
     private String location;
     private String number;
     private String produce;
+    private int amountOfProduceInKg;
     private String email;
     private int priceOf1kgOfProduce;
     private int id;
 
-    public Farmer(String name, String location, String number, String produce, int priceOfProduce) {
+    public Farmer(String name, String location, String number, String produce, int amountOfProduceInKg, int priceOf1kgOfProduce) {
         this.name = name;
         this.location = location;
         this.number = number;
         this.produce = produce;
+        this.amountOfProduceInKg = amountOfProduceInKg;
         this.email = "No email available";
-        this.priceOf1kgOfProduce = priceOfProduce;
+        this.priceOf1kgOfProduce = priceOf1kgOfProduce;
     }
 
-    public Farmer(String name, String location, String number, String produce, String email, int priceOfProduce) {
+    public Farmer(String name, String location, String number, String produce, int amountOfProduceInKg, String email, int priceOfProduce) {
         this.name = name;
         this.location = location;
         this.number = number;
         this.produce = produce;
+        this.amountOfProduceInKg = amountOfProduceInKg;
         this.email = email;
         this.priceOf1kgOfProduce = priceOfProduce;
     }

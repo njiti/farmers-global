@@ -36,14 +36,17 @@ public class Farmer {
     }
 
     public int getId() {
+
         return id;
     }
 
     public void setId(int id) {
+
         this.id = id;
     }
 
     public String getName() {
+
         return name;
     }
 
@@ -75,5 +78,16 @@ public class Farmer {
         return produce;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Farmer farmer = (Farmer) o;
+        return amountOfProduceInKg == farmer.amountOfProduceInKg && priceOf1kgOfProduce == farmer.priceOf1kgOfProduce && id == farmer.id && wallet == farmer.wallet && name.equals(farmer.name) && location.equals(farmer.location) && number.equals(farmer.number) && produce.equals(farmer.produce) && email.equals(farmer.email);
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, location, number, produce, amountOfProduceInKg, email, priceOf1kgOfProduce, id, wallet);
+    }
 }

@@ -9,6 +9,7 @@ public class Farmer {
     private String produce;
     private String email;
     private int priceOf1kgOfProduce;
+    private int id;
 
     public Farmer(String name, String location, String number, String produce, int priceOfProduce) {
         this.name = name;
@@ -26,6 +27,14 @@ public class Farmer {
         this.produce = produce;
         this.email = email;
         this.priceOf1kgOfProduce = priceOfProduce;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -65,12 +74,11 @@ public class Farmer {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Farmer farmer = (Farmer) o;
-        return priceOf1kgOfProduce == farmer.priceOf1kgOfProduce && name.equals(farmer.name) && location.equals(farmer.location) && number.equals(farmer.number) && produce.equals(farmer.produce) && email.equals(farmer.email);
+        return priceOf1kgOfProduce == farmer.priceOf1kgOfProduce && id == farmer.id && name.equals(farmer.name) && location.equals(farmer.location) && number.equals(farmer.number) && produce.equals(farmer.produce) && email.equals(farmer.email);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, location, number, produce, email, priceOf1kgOfProduce);
+        return Objects.hash(name, location, number, produce, email, priceOf1kgOfProduce, id);
     }
-
 }

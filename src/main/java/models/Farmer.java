@@ -36,17 +36,14 @@ public class Farmer {
     }
 
     public int getId() {
-
         return id;
     }
 
     public void setId(int id) {
-
         this.id = id;
     }
 
     public String getName() {
-
         return name;
     }
 
@@ -76,6 +73,10 @@ public class Farmer {
 
     public String getProduce() {
         return produce;
+    }
+
+    public int getWallet() {
+        return wallet;
     }
 
     @Override

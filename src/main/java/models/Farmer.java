@@ -8,7 +8,7 @@ public class Farmer {
     private String number;
     private String produce;
     private String email;
-    private int priceOfProduce;
+    private int priceOf1kgOfProduce;
 
     public Farmer(String name, String location, String number, String produce, int priceOfProduce) {
         this.name = name;
@@ -16,7 +16,7 @@ public class Farmer {
         this.number = number;
         this.produce = produce;
         this.email = "No email available";
-        this.priceOfProduce = priceOfProduce;
+        this.priceOf1kgOfProduce = priceOfProduce;
     }
 
     public Farmer(String name, String location, String number, String produce, String email, int priceOfProduce) {
@@ -25,7 +25,7 @@ public class Farmer {
         this.number = number;
         this.produce = produce;
         this.email = email;
-        this.priceOfProduce = priceOfProduce;
+        this.priceOf1kgOfProduce = priceOfProduce;
     }
 
     public String getName() {
@@ -48,8 +48,8 @@ public class Farmer {
         return location;
     }
 
-    public int getPriceOfProduce() {
-        return priceOfProduce;
+    public int getPriceOf1kgOfProduce() {
+        return priceOf1kgOfProduce;
     }
 
     public String getNumber() {
@@ -65,12 +65,12 @@ public class Farmer {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Farmer farmer = (Farmer) o;
-        return priceOfProduce == farmer.priceOfProduce && name.equals(farmer.name) && location.equals(farmer.location) && number.equals(farmer.number) && produce.equals(farmer.produce) && email.equals(farmer.email);
+        return priceOf1kgOfProduce == farmer.priceOf1kgOfProduce && name.equals(farmer.name) && location.equals(farmer.location) && number.equals(farmer.number) && produce.equals(farmer.produce) && email.equals(farmer.email);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, location, number, produce, email, priceOfProduce);
+        return Objects.hash(name, location, number, produce, email, priceOf1kgOfProduce);
     }
 
 }
